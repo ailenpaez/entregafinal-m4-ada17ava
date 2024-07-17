@@ -1,0 +1,16 @@
+{
+  "name": "entregafinal-m4-ada17ava",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> Desafío Final - TypeScript </h1>",
+  "main": "index.js",
+  "scripts": {
+    "dev":"ts-node ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
