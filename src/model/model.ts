@@ -1,6 +1,9 @@
 import { getAllData } from "../database/database";
 import { Messages } from "../utils/messages";
 
+
+
+
 class HPModel {
   async getAllCharacters() {
     try {
@@ -53,6 +56,9 @@ class HPModel {
       };
     }
   }
+
 }
 
 export { HPModel };
+
+

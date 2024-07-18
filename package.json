@@ -4,9 +4,8 @@
   "description": "<h1 align=\"center\"> Desafío Final - TypeScript </h1>",
   "main": "index.js",
   "scripts": {
-    "dev":"ts-node ./src/index.ts",
-    "model":"ts-node ./src/model.ts",
-    "controller": "ts-node ./src/controller/controller.ts"
+    "dev": "ts-node ./src/index.ts",
+    "client": "ts-node ./src/client.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +13,8 @@
   "dependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11"
   }
 }
