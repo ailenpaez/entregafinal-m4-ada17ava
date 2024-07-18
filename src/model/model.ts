@@ -3,9 +3,13 @@ import { Messages } from "../utils/messages";
 
 class HPModel {
   async getAllCharacters() {
+    // const {characters} = await getAllData("characters");
+    // return characters
+
     try {
       const result = await getAllData("characters");
       const { characters } = result;
+
       return { message: Messages.OK, data: result };
     } catch (error) {
       return {
@@ -57,5 +61,5 @@ class HPModel {
 
 const modelData = new HPModel();
 
-const {getAllCharacters,getAllBooks,getAllSpells,getAllMovies} = modelData
-export {getAllCharacters,getAllBooks,getAllSpells,getAllMovies}
+const { getAllCharacters, getAllBooks, getAllSpells, getAllMovies } = modelData;
+export { getAllCharacters, getAllBooks, getAllSpells, getAllMovies };
