@@ -1,65 +1,30 @@
 import { getAllData } from "../database/database";
 import { Messages } from "../utils/messages";
 
-class HPModel {
+class GotModel {
   async getAllCharacters() {
-    // const {characters} = await getAllData("characters");
-    // return characters
-
-    try {
-      const result = await getAllData("characters");
-      const { characters } = result;
-
-      return { message: Messages.OK, data: result };
-    } catch (error) {
-      return {
-        message: Messages.BAD_REQUEST,
-        error: error.message,
-      };
-    }
+    const Characters = await getAllData("Characters");
+    return Characters;
   }
 
-  async getAllBooks() {
-    try {
-      const result = await getAllData("books");
-      const { books } = result;
-      return { message: Messages.OK, data: result };
-    } catch (error) {
-      return {
-        message: Messages.BAD_REQUEST,
-        error: error.message,
-      };
-    }
-  }
-
-  async getAllSpells() {
-    try {
-      const result = await getAllData("spells");
-      const { spells } = result;
-      return { message: Messages.OK, data: result };
-    } catch (error) {
-      return {
-        message: Messages.BAD_REQUEST,
-        error: error.message,
-      };
-    }
-  }
-
-  async getAllMovies() {
-    try {
-      const result = await getAllData("movies");
-      const { movies } = result;
-      return { message: Messages.OK, data: result };
-    } catch (error) {
-      return {
-        message: Messages.BAD_REQUEST,
-        error: error.message,
-      };
-    }
+  async getAllContinents() {
+    const Continents = await getAllData("Continents");
+    return Continents;
   }
 }
 
-const modelData = new HPModel();
+// class GotModel {
+//   async getAllCharacters() {
+//       const result = await getAllData("Characters");
+//       const { Characters } = result;
+//       console.log(result);
+//     }
+//   }
 
-const { getAllCharacters, getAllBooks, getAllSpells, getAllMovies } = modelData;
-export { getAllCharacters, getAllBooks, getAllSpells, getAllMovies };
+const modelData = new GotModel();
+
+const { getAllCharacters, getAllContinents } = modelData;
+export { getAllCharacters, getAllContinents };
+
+// const { getAllCharacters, getAllBooks, getAllSpells, getAllMovies } = modelData;
+// export { getAllCharacters, getAllBooks, getAllSpells, getAllMovies };

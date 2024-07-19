@@ -4,10 +4,9 @@ import { PORT } from "./constants"; // acá tambien se consume la api
 const client = net.createConnection({ port: PORT });
 
 client.on("connect", () => {
-  // const messageC = {path: "books"}; //^ MODIFICAR
-  // const messageC = {path: "characters"}; //! NO ARRANCA
-  // const messageC = { path: "spells" };
-  const messageC = {path: "movies"};
+  // const messageC = {path: "Characters"}; 
+  const messageC = { path: "Continents" };
+  // const messageC = {path: "movienpms"};
 
   const response = JSON.stringify(messageC);
   client.write(response);

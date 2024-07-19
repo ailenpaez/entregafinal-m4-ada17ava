@@ -1,36 +1,24 @@
 import {
-  getAllBooks,
   getAllCharacters,
-  getAllSpells,
-  getAllMovies,
+  getAllContinents
 } from "../model/model";
-import { Messages } from "../utils/messages";
 
-class HPController {
+class GotController {
   async getAllCharacters() {
     return await getAllCharacters();
   }
 
-  async getAllBooks() {
-    return await getAllBooks();
+  async getAllContinents(){
+    return await getAllContinents()
   }
 
-  async getAllSpells() {
-    return await getAllSpells();
-  }
-
-  async getAllMovies() {
-    return await getAllMovies();
-  }
 }
 
-const controllerData = new HPController();
+const controllerData = new GotController();
 
 const {
   getAllCharacters: allCharacters,
-  getAllBooks: allBooks,
-  getAllSpells: allSpells,
-  getAllMovies: allMovies,
+  getAllContinents: allContinents
 } = controllerData;
 
-export { allCharacters, allBooks, allSpells, allMovies };
+export { allCharacters,allContinents};
