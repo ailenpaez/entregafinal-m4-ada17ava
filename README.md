@@ -1,14 +1,13 @@
-<h1 align="center"> Desafío Final - TypeScript </h1>
+# 🔥 Trabajo integrador del módulo 5 - Api GOT.
 
-<img src="https://i.postimg.cc/MGFfQpX7/desafio.png">
 
-Para este desafío integrador final, te propongo que armes una app que te sirva para automatizar una tarea de tu día a día. La app tiene que estar modularizada, según el patrón MVC como se muestra en el esquema de arriba.
-Además, tiene que cumplir con los siguientes puntos:
+![INTRO](https://pbs.twimg.com/media/GS1CjU0XUAAdzlP?format=jpg&name=medium)
 
-- Archivo README.md que describa de forma clara cómo un usuario tiene que usar la aplicación. Tiene que ser un instructivo sencillo y facil de entender. Aprovechá los scripts configurables del package.json para simplificar los comandos.
-- Consumir datos de al menos una API pública.
-- Uso de funciones asincrónicas: async/await y/o .then().
-- Acciones de lectura y escritura sobre un archivo JSON.
-- Realizar las validaciones necesarias.
+## 🔸Introducción:
 
-Una vez terminado el proyecto, súbanlo a su cuenta personal de GitHub.
+## Modo de ejecución:
+
+### 📍 INSTRUCCIONES PARA EL USUARIO.
+
+
+### 📋 <u> Fuentes y documentación: </u> ###
