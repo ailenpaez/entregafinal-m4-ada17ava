@@ -6,7 +6,6 @@ const client = net.createConnection({ port: PORT });
 client.on("connect", () => {
   // const messageC = {path: "Characters"}; 
   const messageC = { path: "Continents" };
-  // const messageC = {path: "movienpms"};
 
   const response = JSON.stringify(messageC);
   client.write(response);
