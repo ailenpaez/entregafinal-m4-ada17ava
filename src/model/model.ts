@@ -1,5 +1,4 @@
 import { getAllData } from "../database/database";
-import { Messages } from "../utils/messages";
 import fs from "fs";
 import path from "path"; //!para guardar
 
@@ -22,31 +21,19 @@ const saveHistory = async (usedMethod: string, result: any) => {
 
 class GotModel {
   async getAllCharacters() {
-    try {
-      const Characters = await getAllData("Characters");
-      const result = { data: Characters, message: Messages.OK };
-      await saveHistory("Getting all the characters -> ⚔️", result);
-      return result;
-    } catch (error) {
-      console.error(error);
-      const result = { data: null, message: Messages.BAD_REQUEST };
-      await saveHistory("Getting all the characters -> 🛡️", result);
-      return result;
-    }
+    const Characters = await getAllData("Characters");
+    const result = Characters; // { data: Characters, message: Messages.OK };
+    await saveHistory("Getting all the characters -> ⚔️", result);
+    // console.log(result);
+
+    return result;
   }
 
   async getAllContinents() {
-    try {
-      const Continents = await getAllData("Continents");
-      const result = { data: Continents, message: Messages.OK };
-      await saveHistory("Getting all the continents -> 🗺️", result);
-      return result;
-    } catch (error) {
-      console.error(error);
-      const result = { data: null, message: Messages.NOT_FOUND };
-      await saveHistory("Getting all the continents -> 🌎", result);
-      return result;
-    }
+    const Continents = await getAllData("Continents");
+    const result = Continents; // { data: Continents, message: Messages.OK };
+    await saveHistory("Getting all the continents -> 🗺️", result);
+    return result;
   }
 }
 
