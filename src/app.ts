@@ -1,5 +1,8 @@
-import { allCharacters, allContinents } from "./controller/controller";
-
+import {
+  allCharacters,
+  allContinents,
+  characterById,
+} from "./controller/controller";
 import { Messages } from "./utils/messages";
 
 export async function endpoint(msg) {
@@ -15,6 +18,11 @@ export async function endpoint(msg) {
     const data = await allContinents();
     const parsedBook = JSON.stringify(data);
     return parsedBook;
+  } else if (parsedData.path.startsWith("Character/")) {
+    const id = parseInt(parsedData.path.split("/")[1], 10);
+    const data = await characterById(id);
+    const parsedCharacter = JSON.stringify(data);
+    return parsedCharacter;
   } else {
     const msgAlert = JSON.stringify(Messages.BAD_REQUEST);
     return msgAlert;

@@ -1,6 +1,7 @@
 import { getAllData } from "../database/database";
 import fs from "fs";
 import path from "path"; //!para guardar
+import { Messages } from "../utils/messages";
 
 const historyFile = path.resolve(__dirname, "../database/history.json");
 
@@ -35,9 +36,18 @@ class GotModel {
     await saveHistory("Getting all the continents -> 🗺️", result);
     return result;
   }
+
+  async getCharacterById(id: number) {
+    const Characters = await getAllData("Characters");
+    const character = Characters.find((char:any) => char.id === id);
+    const result = character || Messages.NOT_FOUND
+    await saveHistory(`Getting character with ID -> ⚔️ ${id} `, result);
+    return result;
+  }
 }
+
 
 const modelData = new GotModel();
 
-const { getAllCharacters, getAllContinents } = modelData;
-export { getAllCharacters, getAllContinents };
+const { getAllCharacters, getAllContinents, getCharacterById } = modelData;
+export { getAllCharacters, getAllContinents, getCharacterById };
