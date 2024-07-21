@@ -39,15 +39,31 @@ class GotModel {
 
   async getCharacterById(id: number) {
     const Characters = await getAllData("Characters");
-    const character = Characters.find((char:any) => char.id === id);
-    const result = character || Messages.NOT_FOUND
+    const character = Characters.find((char: any) => char.id === id);
+    const result = character || Messages.NOT_FOUND;
     await saveHistory(`Getting character with ID -> ⚔️ ${id} `, result);
+    return result;
+  }
+  async getContinentById(id: number) {
+    const Continents = await getAllData("Continents");
+    const continent = Continents.find((cont: any) => cont.id === id);
+    const result = continent || "Continent not found";
+    await saveHistory(`Getting continent with ID -> 🗺️ ${id} `, result);
     return result;
   }
 }
 
-
 const modelData = new GotModel();
 
-const { getAllCharacters, getAllContinents, getCharacterById } = modelData;
-export { getAllCharacters, getAllContinents, getCharacterById };
+const {
+  getAllCharacters,
+  getAllContinents,
+  getCharacterById,
+  getContinentById,
+} = modelData;
+export {
+  getAllCharacters,
+  getAllContinents,
+  getCharacterById,
+  getContinentById,
+};

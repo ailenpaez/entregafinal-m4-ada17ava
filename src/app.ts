@@ -2,6 +2,7 @@ import {
   allCharacters,
   allContinents,
   characterById,
+  continentById,
 } from "./controller/controller";
 import { Messages } from "./utils/messages";
 
@@ -23,6 +24,10 @@ export async function endpoint(msg) {
     const data = await characterById(id);
     const parsedCharacter = JSON.stringify(data);
     return parsedCharacter;
+  } else if (parsedData.path.startsWith("Continent/")) {
+    const id = parseInt(parsedData.path.split("/")[1], 10);
+    const { data, message } = await continentById(id);
+    return JSON.stringify({ data, message });
   } else {
     const msgAlert = JSON.stringify(Messages.BAD_REQUEST);
     return msgAlert;
