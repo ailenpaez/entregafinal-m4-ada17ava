@@ -24,7 +24,7 @@ A partir de esas consultas, se devolverá un resultado. Este puede ser positivo 
 
 ### 📍 INSTRUCCIONES PARA EL USUARIO.
 
-Por cada consulta que se quiera ejecutar, se debe descomentar una a una la porción de código que arroja los endpoints en el **client.ts**. * Ejemplo : const messageC = { path: "Character/4} *
+Por cada consulta que se quiera ejecutar, se debe descomentar una a una la porción de código que arroja los endpoints en el **client.ts**. _Ejemplo : **const messageC = { path: "Character/4}**_
 
 ```typescript
 
