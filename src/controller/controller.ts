@@ -8,6 +8,7 @@ import {
 import { Messages } from "../utils/messages";
 
 class GotController {
+  
   async getAllCharacters() {
     const result = await getAllCharacters();
     return { data: result, message: Messages.OK };

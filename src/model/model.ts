@@ -1,6 +1,6 @@
 import { getAllData } from "../database/database";
 import fs from "fs";
-import path from "path"; //!para guardar
+import path from "path";
 import { Messages } from "../utils/messages";
 
 const historyFile = path.resolve(__dirname, "../database/history.json");
@@ -23,16 +23,15 @@ const saveHistory = async (usedMethod: string, result: any) => {
 class GotModel {
   async getAllCharacters() {
     const Characters = await getAllData("Characters");
-    const result = Characters; // { data: Characters, message: Messages.OK };
+    const result = Characters;
     await saveHistory("Getting all the characters -> ⚔️", result);
-    // console.log(result);
 
     return result;
   }
 
   async getAllContinents() {
     const Continents = await getAllData("Continents");
-    const result = Continents; // { data: Continents, message: Messages.OK };
+    const result = Continents;
     await saveHistory("Getting all the continents -> 🗺️", result);
     return result;
   }
@@ -44,6 +43,7 @@ class GotModel {
     await saveHistory(`Getting character with ID -> ⚔️ ${id} `, result);
     return result;
   }
+  
   async getContinentById(id: number) {
     const Continents = await getAllData("Continents");
     const continent = Continents.find((cont: any) => cont.id === id);
