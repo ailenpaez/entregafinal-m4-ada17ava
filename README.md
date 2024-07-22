@@ -50,5 +50,6 @@ client.on("connect", () => {
 
 * EMOJIS PARA PERSONALIZAR LAS RESPONSES ➡️[Emojipedia.](https://emojipedia.org/)
 * API GAME OF THRONES ➡️ [API GOT](https://thronesapi.com/api/v2/)
+* REPASO DE CLASES PARA EL PROTOCOLO TCP Y GUARDAR CONSULTAS CON LA DEPENDENCIA NODE 'FS'.
 
 ***

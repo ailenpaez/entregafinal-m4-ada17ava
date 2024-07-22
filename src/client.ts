@@ -4,7 +4,7 @@ import { PORT } from "./constants";
 const client = net.createConnection({ port: PORT });
 
 client.on("connect", () => {
-  // const messageC = { path: "Characters" };
+  const messageC = { path: "Characters" };
   // const messageC = { path: "Continents" };
   // const messageC = { path: "Character/4" }; 
   // const messageC = { path: "Continent/3" }; 
